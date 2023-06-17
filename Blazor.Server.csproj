@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Extensions\JSRuntimeExtension.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="CirclePacking.razor.css" />
+    <None Remove="CirclePacking.razor.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Pages\CirclePacking.razor.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\js\CirclePack.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\d3.v7.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
